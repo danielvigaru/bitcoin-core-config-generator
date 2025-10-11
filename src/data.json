@@ -285,11 +285,6 @@
       "default": 0,
       "min": 0
     },
-    "checkpoints": {
-      "name": "Enable Checkpoints",
-      "description": "Disable expensive verification for known chain history.",
-      "default": 1
-    },
     "dbcrashratio": {
       "name": "DB Crash Ratio",
       "description": "Randomly crash while writing data at a given rate between 0 and 1.",
@@ -479,6 +474,11 @@
       "description": "Always prepend the category and level to each log message.",
       "default": 0
     },
+    "logratelimit": {
+      "name": "Log Rate Limit",
+      "description": "Apply rate limiting to unconditional logging to mitigate disk-filling attacks.",
+      "default": 1
+    },
     "logsourcelocations": {
       "name": "Log Source Locations",
       "description": "Prepend debug output with name of the originating source location (source file, line number and function name).",
@@ -577,8 +577,8 @@
     "datacarriersize": {
       "name": "Max OP_RETURN Size",
       "description": "Maximum size of data in OP_RETURN outputs we relay and mine.",
-      "default": 83,
-      "min": 1
+      "default": 100000,
+      "min": 0
     },
     "permitbaremultisig": {
       "name": "Permit Bare Multisig",
@@ -1069,26 +1069,6 @@
       "name": "Wallet Notification",
       "description": "Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)",
       "default": ""
-    },
-    "dblogsize": {
-      "name": "DB Log Size",
-      "description": "Flush wallet database activity from memory to disk log every <n> megabytes",
-      "default": 100
-    },
-    "flushwallet": {
-      "name": "Flush Wallet Automatically",
-      "description": "Run a thread to flush wallet periodically.",
-      "default": 1
-    },
-    "privdb": {
-      "name": "Private DB",
-      "description": "Set the DB_PRIVATE flag in the wallet db environment.",
-      "default": 1
-    },
-    "swapbdbendian": {
-      "name": "Swap BDB Endian",
-      "description": "Swaps the internal endianness of BDB wallet databases.",
-      "default": 0
     },
     "walletrejectlongchains": {
       "name": "Reject Long Transaction Chains",

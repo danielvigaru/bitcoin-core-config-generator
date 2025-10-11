@@ -77,7 +77,6 @@ class Editor extends Component {
           { this.number('debug', 'checklevel') }
           { this.number('debug', 'checkaddrman') }
           { this.number('debug', 'checkmempool') }
-          { this.flag('debug', 'checkpoints') }
           { this.decimal('debug', 'dbcrashratio') }
           { this.flag('debug', 'fastprune') }
           { this.flag('debug', 'stopafterblockimport') }
@@ -94,6 +93,7 @@ class Editor extends Component {
           { this.flag('debug', 'logips') }
           { this.text('debug', 'loglevel') }
           { this.flag('debug', 'loglevelalways') }
+          { this.flag('debug', 'logratelimit') }
           { this.flag('debug', 'logsourcelocations') }
           { this.flag('debug', 'logthreadnames') }
           { this.flag('debug', 'logtimestamps') }
@@ -213,10 +213,6 @@ class Editor extends Component {
           { this.path('wallet', 'walletdir', base, platform) }
           { this.flag('wallet', 'walletbroadcast') }
           { this.text('wallet', 'walletnotify') }
-          { this.number('wallet', 'dblogsize') }
-          { this.flag('wallet', 'flushwallet') }
-          { this.flag('wallet', 'privdb') }
-          { this.flag('wallet', 'swapbdbendian') }
           { this.flag('wallet', 'walletrejectlongchains') }
           { this.flag('wallet', 'walletcrosschain') }
         </Section>
